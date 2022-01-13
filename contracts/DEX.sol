@@ -174,6 +174,9 @@ contract DEX {
                 nextTradeId ++;
                 i ++; 
             }
+            /*
+            Matching Algorithm: clean up the array for each order match.
+            */
             i = 0;
             while(i < orders.length && orders[i].filled == orders[i].amount) {
                 for(uint j = i; j < orders.length - 1; j++) {
